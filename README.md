@@ -22,17 +22,33 @@ OpenArt's creative workflows.
 
 To receive updates, open `/plugin` → **Marketplaces** → `openart` → **Enable auto-update**.
 
-### Skills only
+### Other agents
 
-If you already have the OpenArt MCP server connected:
+Connect the OpenArt MCP server at `https://mcp.openart.ai/mcp` in your agent's MCP settings and
+sign in, then add the skills:
 
 ```
 npx skills add OpenArt-AI/skills
 ```
 
+### ChatGPT and Codex
+
+Use the OpenArt app from the OpenAI directory. It bundles these skills with the OpenArt
+connection made for ChatGPT and Codex, so there is nothing to install from this repository.
+
 ## Skills
 
-Skills are on the way. Until then, the plugin connects the OpenArt MCP server.
+| Skill | Use for |
+| --- | --- |
+| `ugc` | Phone-native creator ads: peer recommendations, first looks, everyday product use |
+| `pgc` | Professionally staged presenter footage: reviews, explainers, spokesperson takes |
+| `talking-head` | One person speaking to camera, casual or polished |
+| `tvc` | Brand commercials and launch films |
+| `performance-ads` | Paid social feed ads, hooks and controlled variants |
+| `product-listing-video` | Videos for product-detail galleries such as Amazon listings |
+
+Each skill plans the script and shots with you, quotes the credits, and generates with Seedance
+through OpenArt after you approve. Plain image and video requests need no skill.
 
 ## Privacy
 

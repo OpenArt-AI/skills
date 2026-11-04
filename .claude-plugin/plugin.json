@@ -3,6 +3,7 @@
   "displayName": "OpenArt",
   "version": "0.1.0",
   "description": "Generate AI images and videos with OpenArt.",
+  "icon": "./assets/logo.svg",
   "author": {
     "name": "OpenArt Inc",
     "url": "https://openart.ai"
