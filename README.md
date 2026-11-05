@@ -1,7 +1,6 @@
-# OpenArt
+# OpenArt Skills
 
 [![Release](https://img.shields.io/github/v/release/OpenArt-AI/skills)](https://github.com/OpenArt-AI/skills/releases)
-[![License: MIT](https://img.shields.io/github/license/OpenArt-AI/skills)](LICENSE)
 [![Website](https://img.shields.io/badge/website-openart.ai-blue)](https://openart.ai)
 
 > [!NOTE]
@@ -15,30 +14,37 @@ specific creative formats with you. The current skills cover video ads and prese
 
 ## Install
 
-### Claude (claude.ai, Claude Desktop, Cowork)
+### Install for Claude
+
+#### One click
+
+[![Install in Claude](https://img.shields.io/badge/Install_in-Claude-D97757?style=for-the-badge&logo=claude&logoColor=white)](https://claude.ai/customize/plugins/new?marketplace=OpenArt-AI%2Fskills&plugin=openart)
+
+The link opens Claude with the OpenArt plugin ready to install. Confirm, and Claude adds the
+OpenArt connector and the bundled skills. Then sign in to OpenArt from the plugin's
+**Connectors** tab. If you already have OpenArt connected, install the plugin anyway to get the
+skills.
+
+#### Or install manually
 
 1. Open **Customize → Plugins → Add → Add marketplace**.
 2. Enter `OpenArt-AI/skills`, then install **OpenArt**.
-3. Turn on **Sync automatically** to receive updates.
-4. Connect OpenArt from the plugin's **Connectors** tab and sign in.
+3. Connect OpenArt from the plugin's **Connectors** tab and sign in.
+4. Turn on **Sync automatically** to receive updates.
 
-### Claude Code
+### Install for other agents
 
-```
-/plugin marketplace add OpenArt-AI/skills
-/plugin install openart@openart
-```
+The skills run on the OpenArt MCP server, so connect it first:
 
-To receive updates, open `/plugin` → **Marketplaces** → `openart` → **Enable auto-update**.
+1. Add `https://mcp.openart.ai/mcp` in your agent's MCP settings and sign in. Skip this step if
+   OpenArt is already connected.
+2. Install the skills:
 
-### Other agents
+   ```
+   npx skills add OpenArt-AI/skills
+   ```
 
-Connect the OpenArt MCP server at `https://mcp.openart.ai/mcp` in your agent's MCP settings and
-sign in, then add the skills:
-
-```
-npx skills add OpenArt-AI/skills
-```
+   Add `--skill ugc` to install a single skill.
 
 ## Skills
 
@@ -55,6 +61,14 @@ npx skills add OpenArt-AI/skills
 
 Each skill plans the script and shots with you, quotes the credits, and generates with Seedance
 through OpenArt after you approve. Plain image and video requests need no skill.
+
+## Usage example
+
+Attach a product photo and type:
+
+```
+/ugc A young commuter shows how this travel mug keeps her coffee hot all morning. Vertical, for TikTok.
+```
 
 ## Privacy
 
