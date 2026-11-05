@@ -1,0 +1,43 @@
+# Execute through OpenArt MCP
+
+Read this while planning, before fixing references, duration, ratio or request counts: the live form decides
+what the plan can promise. Use the tools the OpenArt connection lists; the host may show them under a
+connector prefix. Their descriptions and the server instructions own host mechanics such as importing
+attachments, result cards, waiting and submitting an offered upgrade.
+
+Use OpenArt for every image and video generation and every other operation it provides. Use another tool
+only for an operation it does not provide, such as trimming and joining during assembly. A missing
+connection, expired access, failed job or inconvenient limit is not evidence that OpenArt lacks the
+capability: resolve or report it without switching to another generation provider or a direct model API.
+
+| For | Use |
+| --- | --- |
+| Model and mode | `openart_model_list`. Draft or full quality selects the model: Seedance 2.5 Draft or Seedance 2.5. A subject in a new scene uses `element2video`; `image2video` animates a literal first frame (`startFrame`, optional `endFrame`) |
+| Duration, ratio, count and audio | `openart_model_form_get` for that model and mode: `duration`, `aspectRatio` (absent on `image2video`, which keeps the frame's ratio), `videoCount` (outputs within one request) and `generateAudio` (one switch for speech, music and ambience, so separate them in the prompt) |
+| Credits | `openart_model_cost` with the model, mode and params of each planned request; state the request count and total |
+| Media the user supplies | The route the server instructions name for this host: `openart_upload_pick` in widget hosts, then wait for its upload-complete message; `openart_upload_sign`, a PUT and `openart_upload_metadata_get` in terminal clients. Pass each returned reference unchanged in the form's reference field |
+| Media already saved in OpenArt | `openart_upload_list` |
+| A missing product, person or scene still | `openart_generate_image`; after inspection, pass the result as a reference with its resource `id` and `url`, a `type` and a `label`, without uploading it again |
+| Naming a reference in the prompt | Media type and order within `visualReferences`: the first image is Image 1, the first audio is Audio 1. Pair it with the role ("the creator in Image 1"). The returned `label` is a filename; it does not bind |
+| The video | `openart_generate_video` |
+| A different language, background or light for an existing video | `openart_tool_form_get` for `dub-video`, `replace-background` or `relight-video`, checked and quoted with `params`, then `openart_run_video_tool` |
+| Earlier results | `openart_creation_get`, `openart_creation_list` and `openart_creation_show`, keyed by `historyId` and `projectId` |
+| A project for the commission | `openart_project_list`, `openart_project_create`; pass its `projectId` on every request |
+| Technical check of a result | The completed resource's `metadata`: `duration`, `width`, `height`, `hasAudio`. It is not a playback review |
+
+A Draft result offers its upgrade as a `suggestedActions` entry of kind `draft_upgrade` with `credits` and,
+when present, `expiresAt`. Quote those figures under [generation approval](generation-approval.md).
+On failure, keep the `historyId` and the actual error, correct a cause before retrying, and stay within the
+authorized retry scope. Do not silently switch model, drop planned speech or music, or substitute a silent video.
+
+## Hook variant bindings
+
+- Pass product and presenter references as `element2video` references, named by role and order. Give every
+  hook the base ad's accepted references in the same order.
+- OpenArt makes sound only inside a generated video. Keep `generateAudio` on when the ad speaks and state in
+  the base and every hook prompt that there is no background music; turning audio off also removes the speech.
+- Read the form's `duration` range before fixing the hook window; Seedance 2.5 currently allows 4 to 30 seconds
+  per request. A shorter opening comes from a longer take with natural handles, trimmed in assembly.
+- No OpenArt tool trims a video or joins two videos. Cut each hook and join it to the accepted body with a media
+  editor where the agent runs, such as FFmpeg, under [assembly and seams](assembly-and-seams.md). When none is
+  available, say so before quoting hooks: the set would arrive as separate openings, not finished ads.

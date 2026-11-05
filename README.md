@@ -45,6 +45,8 @@ connection made for ChatGPT and Codex, so there is nothing to install from this 
 | `talking-head` | One person speaking to camera, casual or polished |
 | `tvc` | Brand commercials and launch films |
 | `performance-ads` | Paid social feed ads, hooks and controlled variants |
+| `hook-variants` | One finished ad in several versions that share a body and differ only in the opening |
+| `ad-variation` | Presenter-led ads remade, edited or varied: new openings, B-roll, captions and sound |
 | `product-listing-video` | Videos for product-detail galleries such as Amazon listings |
 
 Each skill plans the script and shots with you, quotes the credits, and generates with Seedance
