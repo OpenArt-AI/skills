@@ -129,4 +129,3 @@ Keep preview and final resources, selected versions, authorization and review st
 
 These instructions guide the agent; they do not implement a downloader, backend approval lock, budget
 enforcement, deterministic rendering or an upgrade API. Use actual host/tool capabilities and report gaps.
-Future video and hook-variant skills must use the same workflow, while retaining their own creative scope.
