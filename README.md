@@ -1,8 +1,17 @@
 # OpenArt
 
-Generate AI images and videos with [OpenArt](https://openart.ai) from your AI agent. This
-plugin connects the OpenArt MCP server and adds skills that guide the agent through
-OpenArt's creative workflows.
+[![Release](https://img.shields.io/github/v/release/OpenArt-AI/skills)](https://github.com/OpenArt-AI/skills/releases)
+[![License: MIT](https://img.shields.io/github/license/OpenArt-AI/skills)](LICENSE)
+[![Website](https://img.shields.io/badge/website-openart.ai-blue)](https://openart.ai)
+
+> [!NOTE]
+> On ChatGPT or Codex, use the [OpenArt ChatGPT Plugin](https://chatgpt.com/plugins/plugin_asdk_app_6a42dbbe74c081918a592a0aad65ca26) instead. It bundles these
+> skills with an OpenArt connection made for ChatGPT and Codex, so there is nothing to install
+> from this repository.
+
+Generate AI images and videos with [OpenArt](https://openart.ai) from Claude or another AI
+agent. This plugin connects the OpenArt MCP server and adds skills that plan and produce
+specific creative formats with you. The current skills cover video ads and presenter videos.
 
 ## Install
 
@@ -30,11 +39,6 @@ sign in, then add the skills:
 ```
 npx skills add OpenArt-AI/skills
 ```
-
-### ChatGPT and Codex
-
-Use the OpenArt app from the OpenAI directory. It bundles these skills with the OpenArt
-connection made for ChatGPT and Codex, so there is nothing to install from this repository.
 
 ## Skills
 
