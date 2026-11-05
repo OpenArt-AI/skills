@@ -8,6 +8,7 @@
   "plugins": [
     {
       "name": "openart",
+      "displayName": "OpenArt",
       "source": "./",
       "description": "Generate AI images and videos with OpenArt."
     }
