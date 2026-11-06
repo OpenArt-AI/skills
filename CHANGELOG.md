@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/OpenArt-AI/skills/compare/v0.2.0...v0.3.0) (2026-11-06)
+
+
+### Features
+
+* add ad-remake as a second name for ad-variation ([#11](https://github.com/OpenArt-AI/skills/issues/11)) ([57a7168](https://github.com/OpenArt-AI/skills/commit/57a716887656b2e206ba64333f37870c69826543))
+
 ## [0.2.0](https://github.com/OpenArt-AI/skills/compare/v0.1.0...v0.2.0) (2026-11-05)
 
 
