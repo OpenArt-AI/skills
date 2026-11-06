@@ -57,6 +57,7 @@ The skills run on the OpenArt MCP server, so connect it first:
 | `performance-ads` | Paid social feed ads, hooks and controlled variants |
 | `hook-variants` | One finished ad in several versions that share a body and differ only in the opening |
 | `ad-variation` | Presenter-led ads remade, edited or varied: new openings, B-roll, captions and sound |
+| `ad-remake` | An existing ad remade with a new product, person or script, using the same workflow as `ad-variation` |
 | `product-listing-video` | Videos for product-detail galleries such as Amazon listings |
 
 Each skill plans the script and shots with you, quotes the credits, and generates with Seedance
