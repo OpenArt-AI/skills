@@ -2,6 +2,7 @@
 
 [![Release](https://img.shields.io/github/v/release/OpenArt-AI/skills)](https://github.com/OpenArt-AI/skills/releases)
 [![Website](https://img.shields.io/badge/website-openart.ai-blue)](https://openart.ai)
+[![Docs](https://img.shields.io/badge/docs-openart.ai%2Fmcp-blue)](https://openart.ai/mcp/)
 
 > [!NOTE]
 > On ChatGPT or Codex, use the [OpenArt ChatGPT Plugin](https://chatgpt.com/plugins/plugin_asdk_app_6a42dbbe74c081918a592a0aad65ca26) instead. It bundles these
@@ -9,8 +10,13 @@
 > from this repository.
 
 Generate AI images and videos with [OpenArt](https://openart.ai) from Claude or another AI
-agent. This plugin connects the OpenArt MCP server and adds skills that plan and produce
-specific creative formats with you. The current skills cover video ads and presenter videos.
+agent. This plugin connects the OpenArt MCP server, so your agent can create, edit and animate
+images and videos, compare model costs and find earlier work. It also adds skills that plan and
+produce specific creative formats with you. The current skills cover video ads and presenter
+videos.
+
+Check out [OpenArt MCP & CLI](https://openart.ai/mcp/) for step-by-step setup instructions, use
+cases and demo videos.
 
 ## Install
 
